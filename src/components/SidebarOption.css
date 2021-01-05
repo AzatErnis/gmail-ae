@@ -8,7 +8,12 @@
   cursor: pointer;
   color: #818181;
 }
-.sidebarOption:hover .sidebarOption > p .sidebarOption > h3 {
+.sidebarOption:hover,
+.sidebarOption > p:hover,
+.sidebarOption > h3:hover,
+.sidebarOption--active,
+.sidebarOption--active > p,
+.sidebarOption--active > h3 {
   background-color: #fcecec;
   color: #c04b37;
   font-weight: 800;
@@ -26,6 +31,9 @@
 .sidebarOption > .MuiSvgIcon-root {
   padding: 5px;
 }
-.sidebarOption:hover {
+.sidebarOption--active > p {
+  display: inline;
+}
+.sidebarOption:hover > p {
   display: inline;
 }
