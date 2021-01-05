@@ -9,12 +9,12 @@ import { db } from "../firebase";
 import firebase from "firebase";
 
 const SendMail = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const dispatch = useDispatch();
 
   const onSubmit = formData => {
     console.log(formData);
-    db.collection("email").add({
+    db.collection("emails").add({
       to: formData.to,
       subject: formData.subject,
       message: formData.message,
